@@ -1,0 +1,128 @@
+.schedule-container{
+  margin-left: 1rem;
+  width: 30rem;
+  height: 35rem;
+  background-color: #4f8f76;
+  box-shadow: 0.5rem 3rem rgba(0, 0, 0, 0.4);
+
+  &__header{
+    width: 100%;
+    height: 8rem;
+    background-color: royalblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    text-align: center;
+    border-bottom: 3px solid rgb(24, 73, 221);
+    text-shadow: 0 .3rem 0.5rem rgba(0, 0, 0, 0.5);
+
+    .header{
+
+      &__date{
+        font-size: 2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-bottom: 1rem;
+      }
+
+      &__title{
+        font-size: 2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__main{
+    margin: 1rem;
+    font-size: 2rem;
+    .main{
+      &__form-box{
+
+        .form-box{
+          &__form{
+            display: grid;
+            grid-template-columns: 2fr;
+            gap: 5px;
+
+            .form{
+
+              &__task{
+                border: 2px solid #4f8f76;
+                border-radius: 0.5rem;
+                background-color: #d6ece4ec;
+
+              }
+              &__start-time{
+                width: 8rem;
+                border: 2px solid #4f8f76;
+                border-radius: 0.5rem;
+                background-color: #d6ece4ec;
+              }
+              &__end-time{
+                width: 8rem;
+                border: 2px solid #4f8f76;
+                border-radius: 0.5rem;
+                background-color: #d6ece4ec;
+              }
+              &__button{
+                width: 15rem;
+                height: 3rem;
+                color: honeydew;
+                background-color: #06d6a0;
+                border: 1px solid #56cfe1;
+                border-radius: 0.6rem;
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                &:hover{
+                  cursor: pointer;
+                  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
+                  color: rgba(240, 255, 240, 0.863);
+                  background-color: #06b98a;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__day-tasks{
+        margin: 1rem;
+        .day-tasks{
+
+          &__card{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            background-color: rgba(86, 119, 219, 0.842);
+            border: 2px solid royalblue;
+            height: 2rem;
+            font-size: 1.2rem;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            &:hover{
+              cursor: pointer;
+              background-color: rgba(102, 130, 214, 0.842);
+              box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            .card{
+
+              &__remove-task{
+
+                &:hover{
+                  cursor: pointer;
+                  color: red;
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}

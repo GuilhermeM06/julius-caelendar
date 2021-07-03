@@ -1,0 +1,25 @@
+<div class="schedule-container">
+  <div class="schedule-container__header header">
+    <h1 class="header__date" >{{selectDay}}</h1>
+    <h1 class="header__title">Atividades</h1>
+  </div>
+  <div class="schedule-container__main main">
+    <div class="main__form-box form-box" (submit)="addTask()">
+      <form action="" class="form-box__form form">
+        <input class="form__task" type="text" name="task" placeholder="Atividade" [(ngModel)]="inputTask" required>
+        <input class="form__start-time" type="time" name="start-time" [(ngModel)]="inputStartTime" required>
+        <input class="form__end-time" type="time" name="end-time"[(ngModel)]="inputEndTime" required>
+        <button class="form__button" (click)="ifHaveTasks(selectDay)">Marcar</button>
+      </form>
+
+    </div>
+    <div class="main__day-tasks day-tasks" *ngFor="let task of taskListStorage">
+      <div class="day-tasks__card card" *ngIf="task.date == selectDay">
+        <p class="card__task">{{ task.name }}</p>
+        <p class="card__start-time">{{ task.startTime }}</p>
+        <p class="card__end-time">{{ task.finishTime }}</p>
+        <div class="card__remove-task" (click)="removeTask(task)">Deletar</div>
+      </div>
+    </div>
+  </div>
+</div>
